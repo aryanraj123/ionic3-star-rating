@@ -3,7 +3,7 @@ import { Events } from 'ionic-angular'
 
 const HTML_TEMPLATE = `
 <div class="ionic3-star-rating">
-  <button *ngFor="let index of [0,1,2,3,4]" id="{{index}}" type="button" ion-button icon-only (click)="changeRating($event)">
+  <button *ngFor="let index of [0,1,2]" id="{{index}}" type="button" ion-button icon-only (click)="changeRating($event)">
     <ion-icon [ngStyle]="{'color':index < this.Math.round(this.parseFloat(rating)) ? activeColor : defaultColor }" name="{{index < this.Math.round(this.parseFloat(rating)) ? activeIcon : defaultIcon}}"></ion-icon>
   </button>
 </div>
@@ -11,11 +11,11 @@ const HTML_TEMPLATE = `
 
 const CSS_STYLE = `
     .ionic3-star-rating .button {
-        height: 28px;
+        height: 20px;
         background: none;
         box-shadow: none;
         -webkit-box-shadow: none;
-        width: 28px;
+        width: 20px;
     }
     .ionic3-star-rating .button ion-icon {
         font-size: 32px;
